@@ -1,16 +1,20 @@
 // src/components/home/Hero.jsx
-//
-// The first thing a visitor sees. Plain structure for now, no styling —
-// we'll come back and design this once the skeleton is complete.
 
 function Hero() {
   return (
-    <section>
-      <h1>I build software that solves real problems.</h1>
-      <p>
-        Placeholder subtext — a short line about being an Electrical
-        Engineering student at Wits University and a software developer.
-      </p>
+    <section className="bg-bg px-10 py-24 border-l border-border-soft ml-10">
+      <div className="pl-5">
+        <p className="font-mono text-xs tracking-wide text-accent mb-4">
+          EEE STUDENT — WITS UNIVERSITY / SOFTWARE DEVELOPER
+        </p>
+        <h1 className="text-4xl font-medium leading-tight text-text-primary mb-4 max-w-xl">
+          I build software that solves real problems.
+        </h1>
+        <p className="text-base text-text-secondary leading-relaxed max-w-md">
+          Electrical Engineering student and independent developer. I
+          design and ship complete systems, not just code snippets.
+        </p>
+      </div>
     </section>
   );
 }

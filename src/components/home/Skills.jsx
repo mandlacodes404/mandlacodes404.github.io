@@ -13,13 +13,20 @@ const skills = [
 
 function Skills() {
   return (
-    <section>
-      <h2>Skills</h2>
-      <ul>
+    <section id="skills" className="px-10 py-16 border-t border-border">
+      <p className="font-mono text-xs tracking-wide text-accent mb-8">
+        SKILLS
+      </p>
+      <div className="flex flex-wrap gap-2">
         {skills.map((skill) => (
-          <li key={skill}>{skill}</li>
+          <span
+            key={skill}
+            className="text-sm font-mono text-text-secondary border border-border-soft rounded px-3 py-1.5"
+          >
+            {skill}
+          </span>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

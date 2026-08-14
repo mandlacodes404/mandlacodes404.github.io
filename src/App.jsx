@@ -8,11 +8,13 @@ import ProjectPage from "./pages/ProjectPage";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects/:slug" element={<ProjectPage />} />
-      </Routes>
+      <div className="bg-bg min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects/:slug" element={<ProjectPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
