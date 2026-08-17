@@ -5,6 +5,7 @@ const skills = [
   "PHP",
   "JavaScript",
   "React",
+  "Vite",
   "MySQL",
   "Git",
   "CMake",
