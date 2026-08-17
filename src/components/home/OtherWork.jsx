@@ -2,13 +2,13 @@
 
 const otherWork = [
   {
-    name: "Enthropy",
+    name: "Enthropy Website",
     description: "Placeholder description — details to be added.",
     thumbnail: "/images/enthropy/thumbnail.png",
     url: "https://iskool.xyz/ENTHROPY_website.html",
   },
   {
-    name: "iSkool Marketing Website",
+    name: "iSkool Website",
     description: "Placeholder description — details to be added.",
     thumbnail: "/images/iskool-website/thumbnail.png",
     url: "https://iskool.xyz",

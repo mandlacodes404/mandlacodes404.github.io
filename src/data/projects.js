@@ -18,6 +18,10 @@ export const projects = [
       github: null,
       live: "https://sandbox.iskool.xyz",
     },
+    demoCredentials: {
+      email: "sibusiso.mokoena@iskool.demo",
+      password: "Password123",
+    },
     overview: "Placeholder overview paragraph.",
     features: [
       "Placeholder feature one",

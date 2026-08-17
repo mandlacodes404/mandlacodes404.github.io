@@ -1,11 +1,16 @@
 // src/components/home/ProjectCard.jsx
 //
-// Row-style project entry. Links to the live external site if one
-// exists (project.links.live); otherwise renders as a non-clickable
-// row. Internal /projects/:slug case-study pages still exist but are
-// intentionally not linked from here for now.
+// Row-style project entry. If the project has demoCredentials, clicking
+// opens a modal showing them before redirecting to the live site.
+// Otherwise, links straight to project.links.live if it exists.
+// Renders as a non-clickable row if there's no live link at all.
+
+import { useState } from "react";
+import DemoLoginModal from "./DemoLoginModal";
 
 function ProjectCard({ project }) {
+  const [showModal, setShowModal] = useState(false);
+
   const content = (
     <>
       <div className="w-40 h-24 shrink-0 rounded-md border border-border bg-surface overflow-hidden flex items-center justify-center">
@@ -56,6 +61,26 @@ function ProjectCard({ project }) {
       </div>
     </>
   );
+
+  if (project.demoCredentials) {
+    return (
+      <>
+        <button
+          type="button"
+          onClick={() => setShowModal(true)}
+          className="flex gap-5 group py-4 text-left w-full"
+        >
+          {content}
+        </button>
+        {showModal && (
+          <DemoLoginModal
+            project={project}
+            onClose={() => setShowModal(false)}
+          />
+        )}
+      </>
+    );
+  }
 
   if (project.links.live) {
     return (
