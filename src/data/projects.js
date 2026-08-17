@@ -13,9 +13,10 @@ export const projects = [
     shortDescription:
       "Placeholder short description of iSkool for the project card.",
     techStack: ["PHP", "JavaScript", "MySQL", "PWA"],
+    thumbnail: "/images/iskool/thumbnail.png",
     links: {
-      github: null,                 // fill in later if/when public
-      live: null,                   // fill in later if/when live
+      github: null,
+      live: "https://sandbox.iskool.xyz",
     },
     overview: "Placeholder overview paragraph.",
     features: [
@@ -34,6 +35,7 @@ export const projects = [
     shortDescription:
       "Placeholder short description of Dig Dug for the project card.",
     techStack: ["C++", "CMake", "Git"],
+    thumbnail: "/images/dig-dug/thumbnail.png",
     links: {
       github: null,                 // stays null — private university repo
       live: null,

@@ -7,7 +7,7 @@ function Education() {
         EDUCATION
       </p>
       <p className="text-base text-text-secondary leading-relaxed max-w-xl">
-        Placeholder — BSc Electrical Engineering, University of the
+         BSc Electrical Engineering, University of the
         Witwatersrand.
       </p>
     </section>

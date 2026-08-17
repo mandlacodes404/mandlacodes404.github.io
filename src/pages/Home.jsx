@@ -1,6 +1,8 @@
-import Hero from "../components/home/Hero";
+// src/pages/Home.jsx
+
 import About from "../components/home/About";
 import ProjectsSection from "../components/home/ProjectsSection";
+import OtherWork from "../components/home/OtherWork";
 import Skills from "../components/home/Skills";
 import Education from "../components/home/Education";
 import Contact from "../components/home/Contact";
@@ -8,9 +10,9 @@ import Contact from "../components/home/Contact";
 function Home() {
   return (
     <main>
-      <Hero />
       <About />
       <ProjectsSection />
+      <OtherWork />
       <Skills />
       <Education />
       <Contact />

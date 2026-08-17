@@ -1,39 +1,76 @@
 // src/components/home/ProjectCard.jsx
-
-import { Link } from "react-router-dom";
+//
+// Row-style project entry. Links to the live external site if one
+// exists (project.links.live); otherwise renders as a non-clickable
+// row. Internal /projects/:slug case-study pages still exist but are
+// intentionally not linked from here for now.
 
 function ProjectCard({ project }) {
-  return (
-    <div className="border border-border rounded-lg p-5 bg-surface hover:border-border-strong transition-colors">
-      <div className="flex justify-between items-start mb-4">
-        <h3 className="text-base font-medium text-text-primary">
-          {project.name}
-        </h3>
-        {project.isPrivateRepo ? (
-          <i className="ti ti-lock text-sm text-text-muted" aria-hidden="true"></i>
+  const content = (
+    <>
+      <div className="w-40 h-24 shrink-0 rounded-md border border-border bg-surface overflow-hidden flex items-center justify-center">
+        {project.thumbnail ? (
+          <img
+            src={project.thumbnail}
+            alt=""
+            className="w-full h-full object-cover"
+          />
         ) : (
-          <i className="ti ti-arrow-up-right text-sm text-text-muted" aria-hidden="true"></i>
+          <i
+            className="ti ti-photo text-lg text-text-muted"
+            aria-hidden="true"
+          ></i>
         )}
       </div>
-      <p className="text-xs text-text-muted mb-4">{project.category}</p>
-      <div className="flex gap-2 flex-wrap mb-5">
-        {project.techStack.map((tech) => (
-          <span
-            key={tech}
-            className="text-xs font-mono text-accent border border-border-soft rounded px-2 py-1"
-          >
-            {tech}
-          </span>
-        ))}
+
+      <div className="flex-1">
+        <div className="flex items-center gap-2 mb-1">
+          <h3 className="text-base font-medium text-text-primary group-hover:text-accent transition-colors">
+            {project.name}
+          </h3>
+          {project.isPrivateRepo ? (
+            <i
+              className="ti ti-lock text-xs text-text-muted"
+              aria-hidden="true"
+            ></i>
+          ) : project.links.live ? (
+            <i
+              className="ti ti-arrow-up-right text-xs text-text-muted"
+              aria-hidden="true"
+            ></i>
+          ) : null}
+        </div>
+        <p className="text-sm text-text-secondary leading-relaxed mb-2">
+          {project.shortDescription}
+        </p>
+        <div className="flex gap-2 flex-wrap">
+          {project.techStack.map((tech) => (
+            <span
+              key={tech}
+              className="text-xs font-mono text-accent border border-border-soft rounded px-2 py-0.5"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
-      <Link
-        to={`/projects/${project.slug}`}
-        className="text-sm text-accent hover:underline"
-      >
-        View project →
-      </Link>
-    </div>
+    </>
   );
+
+  if (project.links.live) {
+    return (
+      <a
+        href={project.links.live}
+        target="_blank"
+        rel="noreferrer"
+        className="flex gap-5 group py-4"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <div className="flex gap-5 py-4">{content}</div>;
 }
 
 export default ProjectCard;

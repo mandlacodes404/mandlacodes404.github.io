@@ -8,7 +8,9 @@ const skills = [
   "MySQL",
   "Git",
   "CMake",
+  "Tailwind CSS",
   "HTML/CSS",
+  "Assembly Language",
 ];
 
 function Skills() {

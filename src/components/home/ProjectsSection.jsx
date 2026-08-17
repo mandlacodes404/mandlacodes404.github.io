@@ -6,10 +6,10 @@ import ProjectCard from "./ProjectCard";
 function ProjectsSection() {
   return (
     <section id="projects" className="px-10 py-16 border-t border-border">
-      <p className="font-mono text-xs tracking-wide text-accent mb-8">
+      <p className="font-mono text-xs tracking-wide text-accent mb-4">
         SELECTED PROJECTS
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="divide-y divide-border">
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
