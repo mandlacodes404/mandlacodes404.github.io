@@ -8,7 +8,7 @@ function Education() {
       </p>
       <p className="text-base text-text-secondary leading-relaxed max-w-xl">
          BSc Electrical Engineering, University of the
-        Witwatersrand.
+        Witwatersrand - 3rd year
       </p>
     </section>
   );

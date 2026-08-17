@@ -7,8 +7,14 @@ function Contact() {
         CONTACT
       </p>
       <p className="text-base text-text-secondary leading-relaxed max-w-xl mb-4">
-        Placeholder — email address goes here.
+        Feel free to reach out.
       </p>
+      <a
+        href="mailto:mandlasimphiwe99@gmail.com"
+        className="text-sm text-accent hover:underline block mb-2"
+      >
+        mandlasimphiwe99@gmail.com
+      </a>
       <a
         href="https://github.com/mandlacodes404"
         target="_blank"
