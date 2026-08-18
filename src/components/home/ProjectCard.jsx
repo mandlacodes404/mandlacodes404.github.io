@@ -1,9 +1,9 @@
 // src/components/home/ProjectCard.jsx
 //
-// Row-style project entry. If the project has demoCredentials, clicking
-// opens a modal showing them before redirecting to the live site.
-// Otherwise, links straight to project.links.live if it exists.
-// Renders as a non-clickable row if there's no live link at all.
+// Row-style project entry. Clicking opens DemoLoginModal if the project
+// has either demoCredentials or a noDemoExplanation. Otherwise links
+// straight to project.links.live if it exists, or renders as a
+// non-clickable row if there's nothing to link to or explain.
 
 import { useState } from "react";
 import DemoLoginModal from "./DemoLoginModal";
@@ -62,7 +62,7 @@ function ProjectCard({ project }) {
     </>
   );
 
-  if (project.demoCredentials) {
+  if (project.demoCredentials || project.noDemoExplanation) {
     return (
       <>
         <button

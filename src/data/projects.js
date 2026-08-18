@@ -11,8 +11,8 @@ export const projects = [
     name: "iSkool",
     category: "Education Technology Platform",
     shortDescription:
-      "Placeholder short description of iSkool for the project card.",
-    techStack: ["PHP", "JavaScript", "MySQL", "PWA"],
+      "Education Technology Platform.",
+    techStack: ["LIVE"],
     thumbnail: "/images/iskool/thumbnail.png",
     links: {
       github: null,
@@ -30,19 +30,23 @@ export const projects = [
     architecture: "Placeholder architecture description.",
     challenges: "Placeholder technical challenges description.",
     contribution: "Placeholder description of your personal contribution.",
-    screenshots: [],                // { src: "", caption: "" } objects go here later
+    screenshots: [],
   },
   {
     slug: "dig-dug",
     name: "Dig Dug",
     category: "C++ Arcade Game — University Software Engineering Project",
     shortDescription:
-      "Placeholder short description of Dig Dug for the project card.",
-    techStack: ["C++", "CMake", "Git"],
+      "C++ Arcade Game — University Software Engineering Project.",
+    techStack: ["University Project"],
     thumbnail: "/images/dig-dug/thumbnail.png",
     links: {
       github: null,                 // stays null — private university repo
       live: null,
+    },
+    noDemoExplanation: {
+      heading: "Why there's no live demo",
+      body: "Dig Dug was a UNIVERSITY project built for a software development course at Wits University.\n\nThe original source code lives in a private university repository and isn't publicly available.",
     },
     overview: "Placeholder overview paragraph.",
     features: [
@@ -53,6 +57,6 @@ export const projects = [
     challenges: "Placeholder technical challenges description.",
     contribution: "Placeholder description of your personal contribution.",
     screenshots: [],
-    isPrivateRepo: true,            // tells ProjectPage to show "Private repository" text
+    isPrivateRepo: true,
   },
 ];

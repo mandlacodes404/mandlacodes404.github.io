@@ -3,13 +3,13 @@
 const otherWork = [
   {
     name: "Enthropy Website",
-    description: "Placeholder description — details to be added.",
+    description: "Official website for Enthropy, the company that developed the iSkool Education Technology Platform.",
     thumbnail: "/images/enthropy/thumbnail.png",
     url: "https://iskool.xyz/ENTHROPY_website.html",
   },
   {
     name: "iSkool Website",
-    description: "Placeholder description — details to be added.",
+    description: "Official website for the iSkool Education Technology Platform.",
     thumbnail: "/images/iskool-website/thumbnail.png",
     url: "https://iskool.xyz",
   },
