@@ -12,9 +12,9 @@ function About({ isDark, onToggle }) {
         </p>
         <div className="text-base text-text-secondary leading-loose space-y-6 max-w-md">
           <p>
-            Hi there! my name is Mandla Mahlangu. I'm an Electrical
+            Hi there! I'm Mandla and I like to build stuff. I'm an Electrical
             Engineering student at Wits University, but a lot of my time
-            outside the classroom is spent building software. I enjoy
+            outside the lecture room is spent building software. I enjoy
             taking an idea and figuring out how to turn it into something
             that actually works.
           </p>
@@ -37,6 +37,9 @@ function About({ isDark, onToggle }) {
             I'm still learning, and that's one of the things I enjoy most
             about building software. There's always something I don't
             know yet, and another problem to figure out.
+          </p>
+          <p>
+            In my spare time you are likely to find me reading a book, rewatching Game of Thrones or out for a run.
           </p>
         </div>
       </section>
