@@ -7,10 +7,10 @@ import Skills from "../components/home/Skills";
 import Education from "../components/home/Education";
 import Contact from "../components/home/Contact";
 
-function Home() {
+function Home({ isDark, onToggle }) {
   return (
     <main>
-      <About />
+      <About isDark={isDark} onToggle={onToggle} />
       <ProjectsSection />
       <OtherWork />
       <Skills />
