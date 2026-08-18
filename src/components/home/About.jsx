@@ -2,10 +2,10 @@
 
 import MobileIntro from "./MobileIntro";
 
-function About() {
+function About({ isDark, onToggle }) {
   return (
     <>
-      <MobileIntro />
+      <MobileIntro isDark={isDark} onToggle={onToggle} />
       <section id="about" className="px-10 py-16">
         <p className="md:hidden font-mono text-xs tracking-wide text-accent mb-6">
           ABOUT

@@ -1,5 +1,4 @@
 // src/App.jsx
-
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/layout/Sidebar";
@@ -15,6 +14,11 @@ function App() {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
     localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute("content", isDark ? "#0a0a0a" : "#f6f1e7");
+    }
   }, [isDark]);
 
   return (
@@ -29,7 +33,7 @@ function App() {
                   <Sidebar isDark={isDark} onToggle={() => setIsDark(!isDark)} />
                 </div>
                 <div className="md:w-1/2">
-                  <Home />
+                  <Home isDark={isDark} onToggle={() => setIsDark(!isDark)} />
                 </div>
               </div>
             }
